@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/colors.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/typography.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/base.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/styles.css">
+<script src="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet"><style>body{margin:0;background:#fff}a{color:var(--color-primary)}a:hover{color:var(--color-primary-active)}:root{--font-display:'Bricolage Grotesque',sans-serif}</style>
+</helmet>
+<div style="font-family:var(--font-body);color:var(--text-body)">
+  <dc-import name="SiteHeader" current="projects" hint-size="100%,140px"></dc-import>
+  <section style="position:relative;padding:96px 0 76px;background-image:linear-gradient(120deg, rgba(23,120,133,.94), rgba(77,133,49,.86)), url(assets/photos/this-ability-5.jpg);background-size:cover;background-position:center">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:0 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px">
+      <span style="font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--rsa-gold)">Our Work</span>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(34px,4.5vw,54px);color:#fff">Projects</h1>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);max-width:640px">In line with our mission, our projects help us reach out to the communities that need our resources the most.</p>
+    </div>
+  </section>
+  <section style="max-width:var(--container-max);margin:0 auto;padding:80px 24px 40px">
+    <div style="display:flex;justify-content:center;margin-bottom:40px">
+      <x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.SectionHeading" from="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/_ds_bundle.js" eyebrow="Current & Upcoming" title="Projects we are running now" hint-size="640px,auto"></x-import>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <sc-for list="{{ current }}" as="p" hint-placeholder-count="9">
+        <x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.ProgramCard" image="{{ p.img }}" badge="{{ p.badge }}" title="{{ p.title }}" description="{{ p.desc }}" link-label="View project" href="ProjectDetail.dc.html" hint-size="100%,400px"></x-import>
+      </sc-for>
+    </div>
+  </section>
+  <section style="background:var(--rsa-surface);padding:72px 0">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:0 24px">
+      <div style="display:flex;justify-content:center;margin-bottom:36px">
+        <x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.SectionHeading" eyebrow="Our Track Record" title="Past projects" intro="Completed work that has already changed lives across Lagos and beyond." hint-size="640px,auto"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <sc-for list="{{ past }}" as="p" hint-placeholder-count="6">
+          <div style="background:#fff;border:1px solid var(--border-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:var(--rsa-green-100);color:var(--rsa-green-600)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <h3 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:17px;line-height:1.3;color:var(--text-strong)">{{ p }}</h3>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:800}}">
+class Component extends DCLogic {
+  renderVals() {
+    const current = [
+      { title: 'Renovation of Iganmu Schools', img: 'assets/photos/igando-inclusive-school.jpg', badge: 'Schools', desc: 'Rebuilding classrooms and accessibility so every child can learn in dignity.' },
+      { title: 'This Ability 5.0', img: 'assets/photos/this-ability-5.jpg', badge: 'Event', desc: 'Our flagship celebration of ability, inclusion and community.' },
+      { title: 'Leadership & Capacity Development of Children with Disability', img: 'assets/photos/team-photo.jpg', badge: 'Training', desc: 'Building leadership and life skills among children with disabilities.' },
+      { title: 'Building of the Ability Center', img: 'assets/photos/visit-ogun-state.jpg', badge: 'Infrastructure', desc: 'A permanent home for therapy, training and learning.' },
+      { title: 'Sports Fest 4.0', img: 'assets/photos/feed-the-1000.jpg', badge: 'Event', desc: 'Inclusive sport that builds confidence and belonging.' },
+      { title: 'Hiring of Therapists, Interpreters & Instructors', img: 'assets/photos/vocational-skill.jpg', badge: 'Support', desc: 'Sign-language interpreters, therapists and vocational instructors for our children.' },
+      { title: 'This Ability 4.0', img: 'assets/photos/this-ability-5.jpg', badge: 'Event', desc: 'The fourth edition of our signature inclusion celebration.' },
+      { title: 'Business Grants for Young Entrepreneurs with Disability', img: 'assets/photos/vocational-skill.jpg', badge: 'Grants', desc: 'Seed grants that turn skills into sustainable livelihoods.' },
+      { title: 'ThisAbility Education & Leadership Accelerator (TELAP)', img: 'assets/photos/img-4299.jpg', badge: 'Program', desc: 'An accelerator nurturing the next generation of disability leaders.' },
+    ];
+    const past = [
+      'Renovation of LG Primary Inclusive Schools, Ipakodo, Ikorodu',
+      'Renovation of LG Inclusive Schools, Igando',
+      'Teachers\u2019 Development with the University of Georgia',
+      'Donation of Basic and Educational Materials',
+      'THIS \u2013 ABILITY',
+      'Renovation of Igando Inclusive Primary School 1',
+    ];
+    return { current, past };
+  }
+}
+</script>
+</body>
+</html>

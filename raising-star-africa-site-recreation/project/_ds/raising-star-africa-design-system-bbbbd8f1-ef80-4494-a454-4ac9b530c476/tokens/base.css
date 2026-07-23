@@ -1,0 +1,8 @@
+/* Minimal, non-invasive base defaults + link colors. */
+:root{color-scheme:light;}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--surface-page);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+h1,h2,h3,h4,h5{color:var(--text-strong);line-height:var(--lh-heading);}
+a{color:var(--color-primary);text-decoration:none;transition:color var(--dur-fast) var(--ease-out);}
+a:hover{color:var(--color-primary-active);}
+::selection{background:color-mix(in srgb, var(--rsa-teal) 30%, transparent);}
+*{text-wrap:pretty;}

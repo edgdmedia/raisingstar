@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Brand core (sampled from the Raising Star Africa logo) */
+  --rsa-teal: #2db8c9;        /* ring of people — primary brand color */
+  --rsa-teal-600: #1f97a6;    /* darker teal for hover/press */
+  --rsa-teal-700: #177885;
+  --rsa-teal-100: #e2f6f8;    /* tinted teal surface */
+  --rsa-teal-050: #f1fbfc;
+
+  --rsa-green: #5fa03c;       /* map of Africa — secondary */
+  --rsa-green-600: #4d8531;
+  --rsa-green-100: #eaf4e2;
+
+  --rsa-gold: #f2c744;        /* the star — accent / highlight */
+  --rsa-gold-600: #d9a916;
+  --rsa-gold-100: #fdf4d6;
+
+  --rsa-brown: #9a7b6b;       /* wordmark — warm neutral accent */
+  --rsa-brown-700: #6f574a;
+
+  /* Neutrals */
+  --rsa-ink: #26312f;         /* body text — warm near-black */
+  --rsa-slate: #5a6664;       /* secondary text */
+  --rsa-muted: #8a9391;       /* captions / disabled */
+  --rsa-line: #e4e9e8;        /* borders / dividers */
+  --rsa-surface: #f5f8f7;     /* section backgrounds */
+  --rsa-surface-2: #eef3f2;
+  --rsa-white: #ffffff;
+
+  /* Semantic */
+  --rsa-success: #4d8531;
+  --rsa-warning: #d9a916;
+  --rsa-error: #d0532f;
+  --rsa-info: #1f97a6;
+
+  /* Semantic aliases (use these in components) */
+  --color-primary: var(--rsa-teal);
+  --color-primary-hover: var(--rsa-teal-600);
+  --color-primary-active: var(--rsa-teal-700);
+  --color-primary-soft: var(--rsa-teal-100);
+
+  --color-secondary: var(--rsa-green);
+  --color-secondary-hover: var(--rsa-green-600);
+
+  --color-accent: var(--rsa-gold);
+  --color-accent-hover: var(--rsa-gold-600);
+
+  --text-strong: var(--rsa-ink);
+  --text-body: var(--rsa-slate);
+  --text-muted: var(--rsa-muted);
+  --text-on-primary: #ffffff;
+  --text-on-accent: #4a3a10;
+
+  --surface-page: var(--rsa-white);
+  --surface-card: var(--rsa-white);
+  --surface-subtle: var(--rsa-surface);
+  --surface-subtle-2: var(--rsa-surface-2);
+
+  --border-default: var(--rsa-line);
+  --border-strong: #cdd6d4;
+  --focus-ring: color-mix(in srgb, var(--rsa-teal) 55%, transparent);
+
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(38,49,47,.06), 0 1px 3px rgba(38,49,47,.08);
+  --shadow-md: 0 4px 12px rgba(38,49,47,.08), 0 2px 4px rgba(38,49,47,.05);
+  --shadow-lg: 0 14px 34px rgba(38,49,47,.12), 0 4px 10px rgba(38,49,47,.06);
+  --shadow-teal: 0 12px 28px color-mix(in srgb, var(--rsa-teal) 26%, transparent);
+
+  /* Layout */
+  --container-max: 1200px;
+  --content-max: 720px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(.2,.7,.3,1);
+  --ease-in-out: cubic-bezier(.65,.05,.36,1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 400ms;
+
+  --background: var(--surface-page);
+  --foreground: var(--text-strong);
+}
+
+@theme {
+  --font-display: var(--font-display);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  --color-rsa-teal: var(--rsa-teal);
+  --color-rsa-teal-600: var(--rsa-teal-600);
+  --color-rsa-teal-700: var(--rsa-teal-700);
+  --color-rsa-teal-100: var(--rsa-teal-100);
+  --color-rsa-teal-050: var(--rsa-teal-050);
+
+  --color-rsa-green: var(--rsa-green);
+  --color-rsa-green-600: var(--rsa-green-600);
+  --color-rsa-green-100: var(--rsa-green-100);
+
+  --color-rsa-gold: var(--rsa-gold);
+  --color-rsa-gold-600: var(--rsa-gold-600);
+  --color-rsa-gold-100: var(--rsa-gold-100);
+
+  --color-rsa-brown: var(--rsa-brown);
+  --color-rsa-brown-700: var(--rsa-brown-700);
+
+  --color-rsa-ink: var(--rsa-ink);
+  --color-rsa-slate: var(--rsa-slate);
+  --color-rsa-muted: var(--rsa-muted);
+  --color-rsa-line: var(--rsa-line);
+  --color-rsa-surface: var(--rsa-surface);
+  --color-rsa-surface-2: var(--rsa-surface-2);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-teal: var(--shadow-teal);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-strong);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--color-primary-active);
+}
+
+* {
+  text-wrap: pretty;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

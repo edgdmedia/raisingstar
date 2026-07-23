@@ -1,0 +1,61 @@
+:root{
+  /* ===== Brand core (sampled from the Raising Star Africa logo) ===== */
+  --rsa-teal:#2db8c9;        /* ring of people — primary brand color */
+  --rsa-teal-600:#1f97a6;    /* darker teal for hover/press */
+  --rsa-teal-700:#177885;
+  --rsa-teal-100:#e2f6f8;    /* tinted teal surface */
+  --rsa-teal-050:#f1fbfc;
+
+  --rsa-green:#5fa03c;       /* map of Africa — secondary */
+  --rsa-green-600:#4d8531;
+  --rsa-green-100:#eaf4e2;
+
+  --rsa-gold:#f2c744;        /* the star — accent / highlight */
+  --rsa-gold-600:#d9a916;
+  --rsa-gold-100:#fdf4d6;
+
+  --rsa-brown:#9a7b6b;       /* wordmark — warm neutral accent */
+  --rsa-brown-700:#6f574a;
+
+  /* ===== Neutrals ===== */
+  --rsa-ink:#26312f;         /* body text — warm near-black */
+  --rsa-slate:#5a6664;       /* secondary text */
+  --rsa-muted:#8a9391;       /* captions / disabled */
+  --rsa-line:#e4e9e8;        /* borders / dividers */
+  --rsa-surface:#f5f8f7;     /* section backgrounds */
+  --rsa-surface-2:#eef3f2;
+  --rsa-white:#ffffff;
+
+  /* ===== Semantic ===== */
+  --rsa-success:#4d8531;
+  --rsa-warning:#d9a916;
+  --rsa-error:#d0532f;
+  --rsa-info:#1f97a6;
+
+  /* ===== Semantic aliases (use these in components) ===== */
+  --color-primary:var(--rsa-teal);
+  --color-primary-hover:var(--rsa-teal-600);
+  --color-primary-active:var(--rsa-teal-700);
+  --color-primary-soft:var(--rsa-teal-100);
+
+  --color-secondary:var(--rsa-green);
+  --color-secondary-hover:var(--rsa-green-600);
+
+  --color-accent:var(--rsa-gold);
+  --color-accent-hover:var(--rsa-gold-600);
+
+  --text-strong:var(--rsa-ink);
+  --text-body:var(--rsa-slate);
+  --text-muted:var(--rsa-muted);
+  --text-on-primary:#ffffff;
+  --text-on-accent:#4a3a10;
+
+  --surface-page:var(--rsa-white);
+  --surface-card:var(--rsa-white);
+  --surface-subtle:var(--rsa-surface);
+  --surface-subtle-2:var(--rsa-surface-2);
+
+  --border-default:var(--rsa-line);
+  --border-strong:#cdd6d4;
+  --focus-ring:color-mix(in srgb, var(--rsa-teal) 55%, transparent);
+}

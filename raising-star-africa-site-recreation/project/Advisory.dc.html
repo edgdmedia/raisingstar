@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/colors.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/typography.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/base.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet"><style>body{margin:0;background:#fff}a{color:var(--color-primary)}a:hover{color:var(--color-primary-active)}:root{--font-display:'Bricolage Grotesque',sans-serif}</style>
+</helmet>
+<div style="font-family:var(--font-body);color:var(--text-body)">
+  <dc-import name="SiteHeader" current="advisory" hint-size="100%,140px"></dc-import>
+  <section style="position:relative;padding:92px 0 72px;background-image:linear-gradient(120deg, rgba(23,120,133,.94), rgba(77,133,49,.86)), url(assets/photos/igando-inclusive-school.jpg);background-size:cover;background-position:center">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:0 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px">
+      <span style="font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--rsa-gold)">Our People</span>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(34px,4.5vw,54px);color:#fff">Advisory Board</h1>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);max-width:600px">Distinguished advisers who lend their expertise and networks to our cause.</p>
+    </div>
+  </section>
+  <section style="max-width:var(--container-max);margin:0 auto;padding:80px 24px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <sc-for list="{{ people }}" as="p" hint-placeholder-count="7">
+        <div style="background:#fff;border:1px solid var(--border-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:34px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+          <div style="width:132px;height:132px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--rsa-teal),var(--rsa-green));color:#fff;font-family:var(--font-display);font-weight:800;font-size:42px;letter-spacing:.02em">{{ p.initials }}</div>
+          <div>
+            <h3 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--text-strong);line-height:1.25">{{ p.name }}</h3>
+            <div style="margin-top:6px;font-family:var(--font-heading);font-weight:600;font-size:13.5px;letter-spacing:.02em;color:var(--rsa-teal-700)">{{ p.role }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:700}}">
+class Component extends DCLogic {
+  renderVals() {
+    const people = [
+      { name: 'Dr. Adetola A. Saliu', role: 'Special Adviser to the Minister of Education, Nigeria', initials: 'AS' },
+      { name: 'Dr. Kelechuwku Onwukamike (PhD)', role: 'Procter & Gamble', initials: 'KO' },
+      { name: 'Dr. Wisdom Patrick Enang', role: 'Exxon Mobil', initials: 'WE' },
+      { name: 'Fletcher NG', role: 'Advisory Board Member', initials: 'FN' },
+      { name: 'HE Princess (Mrs.) Sarah Adebisi Sosan, OFR', role: 'Advisory Board Member', initials: 'SS' },
+      { name: 'Olusola Samuel Owonikoko', role: 'Founder, Stanforte Edge', initials: 'OO' },
+      { name: 'Yemi Faseun', role: 'YF Talent Partners', initials: 'YF' },
+    ];
+    return { people };
+  }
+}
+</script>
+</body>
+</html>

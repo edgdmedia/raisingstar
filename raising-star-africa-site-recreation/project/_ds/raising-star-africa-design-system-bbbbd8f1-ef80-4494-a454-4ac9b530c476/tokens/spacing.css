@@ -1,0 +1,29 @@
+:root{
+  /* ===== Spacing scale ===== */
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;
+  --space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;
+
+  /* ===== Radii ===== */
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:16px;
+  --radius-xl:24px;
+  --radius-pill:999px;
+
+  /* ===== Shadows (soft, warm-neutral) ===== */
+  --shadow-sm:0 1px 2px rgba(38,49,47,.06), 0 1px 3px rgba(38,49,47,.08);
+  --shadow-md:0 4px 12px rgba(38,49,47,.08), 0 2px 4px rgba(38,49,47,.05);
+  --shadow-lg:0 14px 34px rgba(38,49,47,.12), 0 4px 10px rgba(38,49,47,.06);
+  --shadow-teal:0 12px 28px color-mix(in srgb, var(--rsa-teal) 26%, transparent);
+
+  /* ===== Layout ===== */
+  --container-max:1200px;
+  --content-max:720px;
+
+  /* ===== Motion ===== */
+  --ease-out:cubic-bezier(.2,.7,.3,1);      /* @kind other */
+  --ease-in-out:cubic-bezier(.65,.05,.36,1); /* @kind other */
+  --dur-fast:140ms;   /* @kind other */
+  --dur-base:220ms;   /* @kind other */
+  --dur-slow:400ms;   /* @kind other */
+}

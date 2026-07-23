@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/colors.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/typography.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/base.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/styles.css">
+<script src="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#fff}a{color:var(--color-primary)}a:hover{color:var(--color-primary-active)}:root{--font-display:'Bricolage Grotesque',sans-serif}</style>
+</helmet>
+<div style="font-family:var(--font-body);color:var(--text-body)">
+  <dc-import name="SiteHeader" current="projects" hint-size="100%,140px"></dc-import>
+  <section style="position:relative;padding:92px 0 72px;background-image:linear-gradient(120deg, rgba(23,120,133,.94), rgba(77,133,49,.86)), url(assets/photos/this-ability-5.jpg);background-size:cover;background-position:center">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:0 24px;display:flex;flex-direction:column;align-items:flex-start;gap:14px">
+      <a href="Projects.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-family:var(--font-heading);font-weight:700;font-size:13.5px;color:#fff;text-decoration:none;opacity:.9"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>All projects</a>
+      <span style="display:inline-flex;font-family:var(--font-heading);font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:var(--radius-pill);background:rgba(255,255,255,.16);color:#fff">Event · Awareness &amp; Advocacy</span>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(34px,4.5vw,54px);color:#fff">This Ability 5.0</h1>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);max-width:640px">Promoting Cultural Diversity among Children with Disabilities.</p>
+    </div>
+  </section>
+  <section style="max-width:var(--container-max);margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:22px;font-size:16.5px;line-height:1.8;color:var(--rsa-ink)">
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:28px;color:var(--text-strong)">About this project</h2>
+      <p style="margin:0">This Ability is an awareness and advocacy event used to commemorate and celebrate children with disabilities on Children's Day. It also enlightens society about the abilities embedded in a person with disability. This year's theme is <strong>"Promoting Cultural Diversity among Children with Disabilities."</strong></p>
+      <p style="margin:0">The event consists of a parent seminar, an art exhibition, a talent competition, and financial grants for young adults with disabilities. In the previous edition, we were joined virtually by the U.S. Consulate.</p>
+      <p style="margin:0">We were also joined by the Minister of Trade and Investment of Nigeria, the Commissioner of Youth and Social Development in Lagos, the Air Peace Airline Manager, the IHS Social Development team, and others.</p>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--text-strong)">Gallery</h3>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <sc-for list="{{ photos }}" as="ph" hint-placeholder-count="6"><div style="{{ ph.style }}"></div></sc-for>
+        </div>
+      </div>
+    </div>
+    <aside style="display:flex;flex-direction:column;gap:20px;position:sticky;top:120px">
+      <div style="background:#fff;border:1px solid var(--border-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:28px;display:flex;flex-direction:column;gap:18px">
+        <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--text-strong)">Funding progress</h3>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-heading);font-size:13.5px;margin-bottom:8px"><strong style="color:var(--text-strong)">₦0 raised</strong><span style="color:var(--text-muted)">of ₦50,000,000</span></div>
+          <div style="height:10px;border-radius:999px;background:var(--rsa-surface-2);overflow:hidden"><div style="width:2%;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--rsa-teal),var(--rsa-green))"></div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px">
+          <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:var(--text-muted)">Beneficiaries</span><strong style="color:var(--text-strong);text-align:right">Children with Disabilities</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:var(--text-muted)">Status</span><strong style="color:var(--rsa-green-600)">Upcoming</strong></div>
+        </div>
+        <a href="Donate.dc.html" style="display:flex;align-items:center;justify-content:center;gap:9px;padding:15px;border-radius:var(--radius-pill);background:var(--rsa-gold);color:var(--text-on-accent);font-family:var(--font-heading);font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 10px 22px color-mix(in srgb, var(--rsa-gold) 40%, transparent)" style-hover="background:var(--rsa-gold-600)"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>Sponsor this project</a>
+        <a href="Partner.dc.html" style="display:flex;align-items:center;justify-content:center;padding:14px;border-radius:var(--radius-pill);background:#fff;color:var(--color-primary);border:2px solid var(--color-primary);font-family:var(--font-heading);font-weight:700;font-size:14px;text-decoration:none" style-hover="background:var(--rsa-teal-050)">Partner with us</a>
+      </div>
+    </aside>
+  </section>
+  <section style="background:var(--rsa-surface);padding:72px 0">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:0 24px">
+      <div style="display:flex;justify-content:center;margin-bottom:36px">
+        <x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.SectionHeading" from="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/_ds_bundle.js" eyebrow="Keep Exploring" title="More projects" hint-size="420px,auto"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <sc-for list="{{ more }}" as="p" hint-placeholder-count="3">
+          <x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.ProgramCard" image="{{ p.img }}" badge="{{ p.badge }}" title="{{ p.title }}" description="{{ p.desc }}" link-label="View project" href="Projects.dc.html" hint-size="100%,380px"></x-import>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:800}}">
+class Component extends DCLogic {
+  renderVals() {
+    const srcs = ['assets/gallery/g1.jpg', 'assets/gallery/g9.jpeg', 'assets/gallery/g10.jpeg', 'assets/gallery/g11.jpeg', 'assets/gallery/g13.jpeg', 'assets/gallery/g14.jpeg'];
+    const photos = srcs.map((src) => ({ style: { backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100%', aspectRatio: '4 / 3', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' } }));
+    const more = [
+      { title: 'Renovation of Iganmu Schools', img: 'assets/photos/igando-inclusive-school.jpg', badge: 'Schools', desc: 'Rebuilding classrooms and accessibility so every child can learn in dignity.' },
+      { title: 'Building of the Ability Center', img: 'assets/photos/visit-ogun-state.jpg', badge: 'Infrastructure', desc: 'A permanent home for therapy, training and learning.' },
+      { title: 'Sports Fest 4.0', img: 'assets/photos/feed-the-1000.jpg', badge: 'Event', desc: 'Inclusive sport that builds confidence and belonging.' },
+    ];
+    return { photos, more };
+  }
+}
+</script>
+</body>
+</html>

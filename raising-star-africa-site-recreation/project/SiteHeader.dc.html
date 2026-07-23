@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/colors.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/typography.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/base.css">
+</helmet>
+<header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border-default);box-shadow:var(--shadow-sm);font-family:var(--font-heading)">
+  <div style="background:var(--rsa-teal-700);color:#fff">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:7px 24px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px">
+      <a href="mailto:info@raisingstarafrica.org" style="display:inline-flex;align-items:center;gap:8px;color:#fff;opacity:.92;text-decoration:none">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+        info@raisingstarafrica.org
+      </a>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="https://www.facebook.com/Raising-Star-Africa-Foundation-101535372009952" target="_blank" rel="noreferrer" style="color:#fff;opacity:.9;display:inline-flex"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="https://x.com/RaisingStarAfr" target="_blank" rel="noreferrer" style="color:#fff;opacity:.9;display:inline-flex"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"></path></svg></a>
+        <a href="https://instagram.com/raisingstarafrica" target="_blank" rel="noreferrer" style="color:#fff;opacity:.9;display:inline-flex"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
+        <a href="https://www.linkedin.com/company/raising-stars-africa/" target="_blank" rel="noreferrer" style="color:#fff;opacity:.9;display:inline-flex"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:var(--container-max);margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="Home.dc.html" style="display:inline-flex;flex:0 0 auto"><img src="assets/logo.png" alt="Raising Star Africa Foundation" style="height:56px"></a>
+    <nav style="display:flex;align-items:center;gap:2px">
+      <sc-for list="{{ items }}" as="n" hint-placeholder-count="5">
+        <div style="position:relative" onMouseEnter="{{ n.onEnter }}" onMouseLeave="{{ n.onLeave }}">
+          <a href="{{ n.href }}" style="display:inline-flex;align-items:center;gap:5px;padding:12px 13px;font-family:var(--font-heading);font-weight:600;font-size:14.5px;color:var(--text-strong);text-decoration:none;position:relative" style-hover="color:var(--color-primary)">
+            {{ n.label }}
+            <sc-if value="{{ n.hasSub }}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></sc-if>
+            <sc-if value="{{ n.active }}"><span style="position:absolute;left:13px;right:13px;bottom:6px;height:2.5px;border-radius:2px;background:var(--rsa-gold)"></span></sc-if>
+          </a>
+          <sc-if value="{{ n.showSub }}">
+            <div style="position:absolute;top:100%;left:0;min-width:210px;background:#fff;border:1px solid var(--border-default);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:6px;display:flex;flex-direction:column;z-index:60">
+              <sc-for list="{{ n.sub }}" as="s" hint-placeholder-count="3">
+                <a href="{{ s.href }}" style="padding:10px 12px;border-radius:var(--radius-sm);font-family:var(--font-body);font-size:14px;color:var(--text-body);text-decoration:none" style-hover="background:var(--rsa-teal-050);color:var(--color-primary)">{{ s.label }}</a>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </nav>
+    <a href="Donate.dc.html" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:var(--radius-pill);background:var(--rsa-gold);color:var(--text-on-accent);font-family:var(--font-heading);font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 10px 22px color-mix(in srgb, var(--rsa-gold) 40%, transparent)" style-hover="background:var(--rsa-gold-600)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+      Donate
+    </a>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:140},&quot;current&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { open: null };
+  renderVals() {
+    const cur = this.props.current;
+    const nav = [
+      { key: 'about', label: 'About', href: 'About.dc.html', sub: [
+        { label: 'Advisory Board', href: 'Advisory.dc.html' },
+        { label: 'Board Members', href: 'Board.dc.html' },
+        { label: 'Team Members', href: 'Team.dc.html' } ] },
+      { key: 'programs', label: 'Programs', href: 'Programs.dc.html' },
+      { key: 'projects', label: 'Projects', href: 'Projects.dc.html' },
+      { key: 'blog', label: 'Blog', href: 'Blog.dc.html', sub: [
+        { label: 'Resources', href: 'Resources.dc.html' } ] },
+      { key: 'gallery', label: 'Gallery', href: 'Gallery.dc.html' },
+      { key: 'join', label: 'Join Us', href: 'Volunteer.dc.html', sub: [
+        { label: 'Partner', href: 'Partner.dc.html' },
+        { label: 'Volunteer', href: 'Volunteer.dc.html' } ] },
+    ];
+    const items = nav.map((n) => ({
+      label: n.label,
+      href: n.href,
+      hasSub: !!n.sub,
+      sub: n.sub || [],
+      active: cur === n.key || (n.sub && n.sub.some((s) => s.href.toLowerCase().indexOf((cur || '') + '.dc') === 0)),
+      showSub: !!n.sub && this.state.open === n.key,
+      onEnter: () => this.setState({ open: n.key }),
+      onLeave: () => this.setState({ open: null }),
+    }));
+    return { items };
+  }
+}
+</script>
+</body>
+</html>

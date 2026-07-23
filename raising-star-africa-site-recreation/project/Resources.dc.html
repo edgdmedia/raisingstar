@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/colors.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/typography.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/tokens/base.css">
+<link rel="stylesheet" href="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/styles.css">
+<script src="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#fff}a{color:var(--color-primary)}a:hover{color:var(--color-primary-active)}:root{--font-display:'Bricolage Grotesque',sans-serif}</style>
+</helmet>
+<div style="font-family:var(--font-body);color:var(--text-body)">
+  <dc-import name="SiteHeader" current="blog" hint-size="100%,140px"></dc-import>
+  <section style="position:relative;padding:92px 0 72px;background-image:linear-gradient(120deg, rgba(23,120,133,.94), rgba(77,133,49,.86)), url(assets/photos/img-4299.jpg);background-size:cover;background-position:center">
+    <div style="max-width:var(--container-max);margin:0 auto;padding:0 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px">
+      <span style="font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--rsa-gold)">Transparency</span>
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(34px,4.5vw,54px);color:#fff">Resources</h1>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);max-width:640px">Our impact reports, audited financials and strategy documents — open for anyone to read.</p>
+    </div>
+  </section>
+  <section style="max-width:var(--container-max);margin:0 auto;padding:76px 24px 40px">
+    <div style="margin-bottom:28px"><x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.SectionHeading" from="_ds/raising-star-africa-design-system-bbbbd8f1-ef80-4494-a454-4ac9b530c476/_ds_bundle.js" align="left" eyebrow="Our Impact" title="Impact reports" hint-size="420px,auto"></x-import></div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px">
+      <sc-for list="{{ impact }}" as="d" hint-placeholder-count="4"><a href="{{ d.href }}" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--border-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:22px 24px;text-decoration:none" style-hover="box-shadow:var(--shadow-lg);border-color:var(--rsa-teal)"><span style="flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:var(--rsa-teal-100);color:var(--rsa-teal-700);display:inline-flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span><span style="flex:1"><span style="display:block;font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--text-strong)">{{ d.title }}</span><span style="display:block;font-family:var(--font-heading);font-size:12.5px;color:var(--text-muted);margin-top:3px">{{ d.meta }}</span></span><span style="flex:0 0 auto;color:var(--color-primary)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span></a></sc-for>
+    </div>
+  </section>
+  <section style="max-width:var(--container-max);margin:0 auto;padding:24px 24px 40px">
+    <div style="margin-bottom:28px"><x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.SectionHeading" align="left" eyebrow="Accountability" title="Financial & audit reports" hint-size="480px,auto"></x-import></div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px">
+      <sc-for list="{{ financial }}" as="d" hint-placeholder-count="5"><a href="{{ d.href }}" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--border-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:22px 24px;text-decoration:none" style-hover="box-shadow:var(--shadow-lg);border-color:var(--rsa-green)"><span style="flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:var(--rsa-green-100);color:var(--rsa-green-600);display:inline-flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span><span style="flex:1"><span style="display:block;font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--text-strong)">{{ d.title }}</span><span style="display:block;font-family:var(--font-heading);font-size:12.5px;color:var(--text-muted);margin-top:3px">{{ d.meta }}</span></span><span style="flex:0 0 auto;color:var(--rsa-green-600)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span></a></sc-for>
+    </div>
+  </section>
+  <section style="max-width:var(--container-max);margin:0 auto;padding:24px 24px 80px">
+    <div style="margin-bottom:28px"><x-import component-from-global-scope="RaisingStarAfricaDesignSystem_bbbbd8.SectionHeading" align="left" eyebrow="Direction" title="Strategy" hint-size="360px,auto"></x-import></div>
+    <a href="assets/documents/strategy-document.pdf" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:18px;background:var(--rsa-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px 26px;text-decoration:none;max-width:560px" style-hover="box-shadow:var(--shadow-lg);border-color:var(--rsa-gold)"><span style="flex:0 0 auto;width:48px;height:48px;border-radius:12px;background:var(--rsa-gold-100);color:var(--rsa-gold-600);display:inline-flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></span><span style="flex:1"><span style="display:block;font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--text-strong)">Raising Star Africa Strategy Document</span><span style="display:block;font-family:var(--font-heading);font-size:12.5px;color:var(--text-muted);margin-top:3px">PDF · Our multi-year roadmap</span></span><span style="flex:0 0 auto;color:var(--rsa-gold-600)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span></a>
+  </section>
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:800}}">
+class Component extends DCLogic {
+  renderVals() {
+    const impact = [
+      { title: '2025 Annual Impact Report', meta: 'PDF · Latest', href: 'assets/documents/2025-impact-report.pdf' },
+      { title: '2024 Annual Impact Report', meta: 'PDF · opens on our site', href: 'https://www.raisingstarafrica.org/wp-content/uploads/2025/10/Annual-Impact-Report-2024-1-1.pdf' },
+      { title: 'Annual Impact Report 2022', meta: 'PDF · opens on our site', href: 'https://www.raisingstarafrica.org/wp-content/uploads/2025/08/Imapct-Report-2022.pdf' },
+      { title: '2021 Annual Impact Report', meta: 'PDF', href: 'assets/documents/2021-impact-report.pdf' },
+    ];
+    const financial = [
+      { title: '2025 Financial Audit Report', meta: 'PDF · Audited', href: 'assets/documents/2025-financial-audit-report.pdf' },
+      { title: '2024 Audit Report', meta: 'PDF · Audited', href: 'assets/documents/2024-audit-report.pdf' },
+      { title: '2023 Account Final', meta: 'PDF', href: 'assets/documents/2023-account.pdf' },
+      { title: 'Financial Statement 2022', meta: 'PDF', href: 'assets/documents/2022-financial-statement.pdf' },
+      { title: '2021 Financial Report', meta: 'PDF', href: 'assets/documents/2021-account-final.pdf' },
+    ];
+    return { impact, financial };
+  }
+}
+</script>
+</body>
+</html>
